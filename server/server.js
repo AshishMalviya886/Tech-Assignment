@@ -1,3 +1,4 @@
+require('dotenv').config();
 const app = require('./app');
 const connectDatabase = require('./config/database');
 const cloudinary = require('cloudinary');
@@ -18,7 +19,7 @@ cloudinary.config({
 });
 
 const server = app.listen(PORT, () => {
-    console.log(`Server running`)
+    console.log(`Server running on port ${PORT}`);
 });
 
 // Unhandled Promise Rejection
